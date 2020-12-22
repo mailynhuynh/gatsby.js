@@ -1,7 +1,8 @@
 import React from "react"
 import styles from "./about.module.css"
 import Header from "../components/header"
-import Container from "../components/container"
+import Layout from "../components/layout"
+import { Link } from "gatsby"
 
 console.log(styles)
 
@@ -17,10 +18,11 @@ const User = props => (
 
 export default function About() {
     return (
-        <Container>
-            <Header headerText="About Mailyn"/>
-            <Header headerText="It's pretty cool" />
-            <p>Such wow. Very cool.</p>
+        <Layout>
+            <Header headerText="About me."/>
+            <p>
+              I’m good enough, I’m smart enough, and gosh darn it, people like me!
+            </p>
             <User
                 username="Jane Doe"
                 avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
@@ -31,6 +33,6 @@ export default function About() {
                 avatar="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg"
                 excerpt="I'm Bob Smith, a vertically aligned type of guy. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
             />
-        </Container>
+        </Layout>
     )
 }
